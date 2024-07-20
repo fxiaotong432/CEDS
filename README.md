@@ -20,16 +20,14 @@ First, a 3D cropped block from a CT scan is fed into both the teacher and studen
 ## Requirements
 The code is written in Python and requires the following packages: 
 
+* Python                       3.8.15
+* numpy                        1.23.5
 * torch                        1.12.1+cu116
+* tensorflow                   2.12.0
 * keras                        2.12.0
+* monai-weekly                 1.2.dev2323
 * cachetools                   5.2.0
-
-matplotlib                   3.6.2
-monai-weekly                 1.2.dev2323
-numpy                        1.23.5
-oauthlib                     3.2.2
-opencv-python                4.6.0.66
-pandas                       1.5.2
-scikit-learn                 1.2.0
-tensorflow                   2.12.0
-torch                        1.12.1+cu116
+* matplotlib                   3.6.2
+* opencv-python                4.6.0.66
+* scikit-learn                 1.2.0
+* pandas                       1.5.2
