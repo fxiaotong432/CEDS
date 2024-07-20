@@ -13,4 +13,23 @@ To address this limitation, we propose a confidence-enhanced semi-supervised lea
 
 Figure 1 shows the pipeline of the proposed model. 
 
-![Model.pdf](https://github.com/fxiaotong432/CEDS/blob/main/Model.pdf)
+![Model.png](https://github.com/fxiaotong432/CEDS/blob/main/Model.png)
+
+First, a 3D cropped block from a CT scan is fed into both the teacher and student models. Then, the teacher model, utilizing the exponential moving average (EMA) of the student model’s weights, generates segmentation predictions and a corresponding confidence map through two distinct decoders. Finally, this confidence map guides the calculation of consistency loss, which is determined by the differences in high-confidence predictions between the teacher and student models.
+
+## Requirements
+The code is written in Python and requires the following packages: 
+
+* torch                        1.12.1+cu116
+* keras                        2.12.0
+* cachetools                   5.2.0
+
+matplotlib                   3.6.2
+monai-weekly                 1.2.dev2323
+numpy                        1.23.5
+oauthlib                     3.2.2
+opencv-python                4.6.0.66
+pandas                       1.5.2
+scikit-learn                 1.2.0
+tensorflow                   2.12.0
+torch                        1.12.1+cu116
